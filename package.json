@@ -9,6 +9,10 @@
     "html-minifier": "^4.0.0",
     "postcss-clean": "^1.1.0",
     "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.7.2"
+    "tailwindcss": "^1.7.2",
+    "tailwindcss-debug-screens": "^1.1.0"
+  },
+  "dependencies": {
+    "gsap": "^3.5.1"
   }
 }

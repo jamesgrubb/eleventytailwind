@@ -10,13 +10,22 @@
     {% endif %}
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-    <link rel="stylesheet" href="/style.css?v={% version %}"/>
+  <link rel="stylesheet" href="https://use.typekit.net/ryj5vrb.css">
+    <link rel="stylesheet" href="style.css?v={% version %}"/>
+
     {% block head %}{% endblock %}
     <script src="/js/alpine.js?v={% version %}"></script>
+
   </head>
-  <body>
+  <body style="height:200vh" class="font-body bg-gray-300 debug-screens">
+  {% block header %}{% endblock %}
     {% block content %}
       {{ content | safe }}
-    {% endblock %}
+    {% endblock %}        
+    
+    <script src="js/scrollTrigger.js?v={% version %}" defer></script>
+    <script src="js/gsap.js?v={% version %}" defer></script>    
+    <script src="js/scripts.js?v={% version %}" defer></script>
+    <script src="js/alpine.js?v={% version %}" defer></script>
   </body>
 </html>
