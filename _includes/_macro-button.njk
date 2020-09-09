@@ -1,6 +1,6 @@
 {% macro button(text='', url=false, disabled=false) %}
   {% set disabledCode = 'disabled=disabled aria-disabled=true' %}
-  {% set buttonClass = 'w-full rounded-sm py-4 bg-teal-900 text-teal-300 uppercase tracking-widest font-semibold hover:bg-canary hover:text-teal-900' %}
+  {% set buttonClass = 'w-full  rounded-sm py-4 bg-teal-900 text-teal-300 uppercase tracking-widest font-semibold hover:bg-canary hover:text-teal-900' %}
   {% if url %}
     <a class="{{ buttonClass }}" href="{{ url }}" role="button">{{ text }}</a>
   {% else %}

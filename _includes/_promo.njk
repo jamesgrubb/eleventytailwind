@@ -1,24 +1,16 @@
+{% from "./macros/_hero-promo.njk" import heroPromo %}
 {% from "./_promo-macro.njk" import promo  %}
 {% from "./_macro-button.njk" import button %}
+{% from "./macros/_section-title.njk" import title %}
 
 
- <section class="container my-20 flex justify-center bg-red-200">
-    <div class="w-full flex flex-wrap">
-      <article class="md:mb-16 md:w-3/4 md:ml-auto flex flex-wrap bg-red-300 promo-box">
-        <div class="p-4 sm:w-3/5">
-          <h2 class="text-5xl w-full font-display text-gold flex relative items-baseline yoga">One-to-One{% include "_yoga.njk" %}</h2>
-          <p class="mt-5 text-2xl">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis rem consequatur, corrupti alias error non cumque cum quibusdam quas esse mollitia eius quidem?
-          </p>
-        </div>
-        <div class="-mx-4 sm:w-2/5 sm:mx-0 sm:-mr-4 sm:-my-4 flex sm:flex-col flex-grow py-20 justify-center flex-wrap px-20 sm:py-16 sm:px-8 bg-teal-500 mt-auto promo-cta">
-            <div class="w-full flex items-baseline justify-between sm:mt-auto"><span class="uppercase tracking-widest">from</span><span class="text-3xl">£50</span></div>
-            {{ button(text="Get started") }}
-        </div>
-      </article>
-  <div class="w-full md:w-3/4 block md:flex justify-between md:ml-auto">
-        {{ promo('Wednesday','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','20','inquire') }}
-        {{ promo('Wednesday','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','20') }}
-        </div>
-    </div>  
+    
+ <section class="container my-20 block sm:flex justify-between flex-wrap even:mt-32 overflow-x-hidden">
+        <div class="sm:w-5/12 flex flex-col justify-center items-center">
+        <h2 class="text-gold text-6xl">Classes</h2>
+        <p class="mt-8 text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, adipisci!</p>
+        </div>       
+        {{ promo('Wednesday','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','20','https://res.cloudinary.com/makingthings/image/upload/v1599551655/yoga/pose-1.svg','active') }}
+        {{ promo('Wednesday','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','20','https://res.cloudinary.com/makingthings/image/upload/v1599551655/yoga/pose-1.svg') }}
+        {{ promo('Office','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','10','https://res.cloudinary.com/makingthings/image/upload/v1599551418/yoga/pose-2.svg') }}          
   </section>

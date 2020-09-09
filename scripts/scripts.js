@@ -11,3 +11,7 @@ tl.from('header', {
     }
 }
 )
+
+const bend = gsap.timeline()
+
+bend.to('.bend', { attr: { d: 'M0 20 C20 15 80 15 100 20' }, duration: 2, yoyo: true, repeat: -1 })

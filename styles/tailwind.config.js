@@ -10,6 +10,13 @@ module.exports = {
 
   theme: {
     extend: {
+      inset: {
+        '110%': '110%',
+        '-10%': '-10%',
+        '100%': '100%',
+        '90%': '90%',
+        '10%': '10%',
+      },
       container: {
         center: true,
         padding: "1.5rem",
@@ -22,6 +29,27 @@ module.exports = {
         body: ['Poppins', 'sans-serif'],
         display: ['modish', 'sans'],
         meta: ['urw-din-semi-condensed', 'mono']
+      },
+      backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        '50%': '50%',
+        '16': '4rem',
+      },
+      backgroundPosition: {
+        bottom: 'bottom',
+        'bottom-4': 'center bottom 1rem',
+        center: 'center',
+        left: 'left',
+        'left-bottom': 'left bottom',
+        'left-top': 'left top',
+        right: 'right',
+        'right-bottom': 'right bottom',
+        'right-top': 'right top',
+        top: 'top',
+        'top-4': 'center top 1rem',
+        'bottom-16': 'center bottom 2rem'
       },
       lineHeight: {
         '11': "2.75rem",
@@ -43,13 +71,25 @@ module.exports = {
         "5xl": "64rem",
         "6xl": "72rem",
       },
+      minHeight: {
+        xs: "20rem",
+        sm: "24rem",
+        md: "28rem",
+        lg: "32rem",
+        xl: "36rem",
+        "2xl": "42rem",
+        "3xl": "48rem",
+        "4xl": "56rem",
+        "5xl": "64rem",
+        "6xl": "72rem",
+      }
     },
   },
   variants: {
-
-    borderWidth: ['responsive', 'first', 'hover', 'focus'],
+    backgroundPosition: ['responsive', 'hover', 'focus'],
+    borderWidth: ['responsive', 'first', 'even', 'hover', 'focus'],
     margin: ['responsive', 'first', 'last', 'hover', 'focus'],
-
+    backgroundSize: ['responsive', 'hover', 'focus'],
   },
   plugins: [
     plugin(function ({ addUtilities }) {
@@ -62,10 +102,11 @@ module.exports = {
           width: "50%",
           display: "block"
         },
-        '.yoga:before': {
+        '.yoga:after': {
           content: `""`,
-          borderBottom: "1px solid",
+          borderBottom: `1px solid`,
           flex: "1",
+          marginLeft: "0.5rem"
         }
       }
 

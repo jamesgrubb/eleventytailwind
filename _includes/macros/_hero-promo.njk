@@ -1,0 +1,17 @@
+{% macro heroPromo(class, description, price, bg) %}
+{% from "../_macro-button.njk" import button  %}
+<article class="md:mb-16 md:w-3/4 md:ml-auto flex flex-wrap bg-red-300 w-full promo-box">
+        <div class="p-4 w-full sm:w-3/5">
+          <h2 class="text-5xl font-display text-gold flex relative items-baseline yoga">{{ class }}{% include "_yoga.njk" %}</h2>
+          <p class="mt-5 text-2xl">
+            {{ description }}
+          </p>
+        </div>
+        <div style="--bg:url({{ bg }})" class="-mx-4 sm:w-2/5 sm:mx-0 sm:-mr-4 sm:-my-4 flex sm:flex-col flex-grow py-20 justify-start flex-wrap px-20 sm:py-16 sm:px-8 bg-teal-200 mt-auto promo-cta sm:min-h-md bg-left-bottom bg-50%">
+            <div class="w-full flex items-baseline justify-between">
+            <span class="uppercase tracking-widest">from</span><span class="text-3xl">£{{ price }}</span>
+            </div>
+            {{ button(text="get started") }}
+            </div>
+</article>
+{% endmacro %}      
