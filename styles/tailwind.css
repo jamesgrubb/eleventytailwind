@@ -56,12 +56,23 @@
   background-size: contain;
 }
 
+
 .promo-cta:after {
+  @apply text-gold;
   position: absolute;
   content: "";
   border-bottom: 1px solid;
   width: 80%;
   bottom: 10%;
+  transition: border 0.2s ease;
+}
+
+.promo-box:hover .promo-cta:after {
+  border-bottom: 3px solid;
+}
+
+.promo-cta:hover:after {
+  border-bottom: 3px solid;
 }
 
 .promo-box.hero:after {
@@ -92,6 +103,7 @@
 
 .promo-box:before,
 .promo-box:after {
+  @apply text-gold;
   z-index: 10;
   position: absolute;
   content: "";
@@ -101,6 +113,12 @@
   bottom: 0;
   transform-origin: center 80%;
   transform: scale(0.85);
+  transition: border 0.2s ease;
+}
+
+.promo-box:hover:before,
+.promo-box:hover:after {
+  border-left: 3px solid;
 }
 
 .promo-box:before {
@@ -127,6 +145,10 @@
   -webkit-box-flex: 1;
   flex: 1;
   border-bottom: 1px solid;
+}
+
+.promo-cta:hover .yoga:after {
+  border-bottom: 3px solid;
 }
 
 [x-cloak] {
@@ -160,4 +182,10 @@
 .frame-x:after {
   bottom: 0;
   @apply mt-4;
+}
+
+.intro {
+  mask-image: url("../_includes/mask.svg");
+  mask-size: fill;
+  mask-repeat: no-repeat;
 }

@@ -1,9 +1,10 @@
 {% set em ="font-semibold not-italic text-gold" %}
 {% from "./macros/_section-title.njk" import title %}
 
-<section class="sm:h-auto h-screen sm:min-h-auto">
-    <div
-        class="sm:py-24 container sm:px-12 xl:px-32 bg-teal-200 flex flex-col justify-around sm:justify-start sm:flex-row items-center text-center sm:text-left relative h-full">
+<section class="relative sm:h-auto h-screen sm:min-h-auto  bg-teal-200">
+
+    <div class="sm:py-24 container sm:px-12 xl:px-32 bg-teal-200 flex flex-col justify-around sm:justify-start
+            sm:flex-row items-center text-center sm:text-left relative h-full">
         <h2
             class="sm:w-2/3 md:w-7/12 lg:text-8xl font-display text-center sm:text-left text-5xl sm:text-6xl leading-14 lg:leading-17 text-gold sm:mb-10 flex flex-col">
 
@@ -22,7 +23,7 @@
     <p class="text-xl sm:w-2/3 lg:text-3xl text-teal-900 text-center sm:text-left">
         Take some time to focus on your
         <em class="{{ em }}">health</em>, <em class="{{ em }}">wellbeing</em> and
-        <em class="{{ em }}">fitness</em>
+        <em class="{{ em }}">fitness</em>.
     </p>
     <div class="mt-4 sm:mt-0 sm:w-1/4">
         {{ button("get started") }}

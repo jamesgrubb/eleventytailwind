@@ -1,16 +1,16 @@
 {% macro promo(class, description, price, url, active=false) %}
 {% from "./_macro-button.njk" import button %}
 
-<article class=" sm:w-5/12 flex flex-col mt-8 promo-box even:mt-32">
+<article class="sm:w-5/12 flex flex-col mt-8 promo-box even:mt-32">
   <div class="p-4">
-    <h2 class="relative flex items-center text-gold text-6xl font-display yoga"><span
-        class="relative">{{ class }}{% include "_yoga.njk" %}</span></h2>
+    <h3 class="relative flex items-center text-gold text-5xl md:text-6xl font-display yoga"><span
+        class="relative">{{ class }}{% include "_yoga.njk" %}</span></h3>
     <p class="mt-5">{{ description }}</p>
   </div>
   <div style="--bg:url({{ url }})"
     class="-mx-4 flex flex-grow py-20 md:py-0 md:pt-20 md:pb-32 justify-center sm:items-end flex-wrap px-20 sm:px-10 bg-teal-200 bg-left-bottom bg-50% promo-cta relative">
     {% if active == false %}
-    <svg class="absolute text-teal-800 -top-10% h-24 sm:h-32 right-10%" viewBox="0 0 345 381" fill="none"
+    <svg class="absolute text-teal-800 -top-10% h-24 lg:h-32 right-10%" viewBox="0 0 345 381" fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M102.187 343.898C63.2805 325.879 32.7067 293.706 16.6931 253.932C0.679484 214.158 0.430721 169.775 15.9975 129.824"
@@ -47,7 +47,8 @@
         d="M247.984 320.207L253.437 316.344L280.39 331.408L264.316 308.645L269.46 304.911L292.786 337.949L287.643 341.683L260.484 326.619L276.635 349.485L271.311 353.245L247.984 320.207Z"
         fill="currentColor" />
     </svg>
-
+    {% else %}
+    {% include "_first-class.svg" %}
     {% endif %}
     <div class="w-full sm:w-1/2">
       <div class="w-full flex items-baseline justify-between">

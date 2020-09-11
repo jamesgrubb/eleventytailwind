@@ -109,7 +109,7 @@ module.exports = {
     margin: ['responsive', 'first', 'last', 'hover', 'focus'],
     backgroundSize: ['responsive', 'hover', 'focus'],
     height: ['responsive', 'hover', 'focus'],
-    backgroundColor: ['responsove', 'over', 'focus', 'active']
+    backgroundColor: ['responsive', 'hover', 'focus', 'active']
   },
   plugins: [
     plugin(function ({ addUtilities }) {
@@ -124,7 +124,7 @@ module.exports = {
         },
         '.yoga:after': {
           content: `""`,
-          borderBottom: `1px solid`,
+          borderBottom: `3px solid`,
           flex: "1",
           marginLeft: "0.5rem"
         }

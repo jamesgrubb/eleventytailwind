@@ -1,0 +1,29 @@
+{% from "./macros/_section-title.njk" import title %}
+{% from "./macros/_section-paragraph.njk" import sectionParagraph %}
+{% from "./macros/_button.njk" import button %}
+<section class="container my-24 flex flex-wrap">
+    <div class="w-full">
+        {{ title("Join the mailing list") }}
+        {{ sectionParagraph("To receive information about changes to venues and timetables along with other news, subscribe the newsletter.","left")}}
+    </div>
+    <form class="bg-teal-200 -mx-4 flex-1 px-4 py-12 mt-10 flex flex-col items-center justify-center max-width-lg"
+        name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <div class="w-full max-w-lg">
+            <div hidden aria-hidden="true">
+                <label class="font-meta">
+                    Don’t fill this out if you're human:
+                    <input name="bot-field" />
+                </label>
+            </div>
+            <label class="text-sm tracking-widest font-meta uppercase mb-4 block self-start" for="email">Your email
+                address</label>
+            <div class="flex w-full items-center justify-center ">
+                <input class="w-full sm:flex-1 mr-8 px-4 py-4 mb-2 sm:mb-0" type="email" name="email"
+                    placeholder="Email" id="email" required />
+                <div class="sm:w-1/4">
+                    {{ button("submit") }}
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
