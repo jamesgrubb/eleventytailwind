@@ -1,3 +1,6 @@
+
+gsap.registerPlugin(ScrollTrigger);
+
 gsap.registerPlugin(ScrollTrigger)
 const tl = gsap.timeline()
 const q = gsap.timeline({ defaults: { duration: 2 } })
