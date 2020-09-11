@@ -4,13 +4,15 @@
 {% from "./macros/_section-title.njk" import title %}
 
 
-    
- <section class="container my-20 block sm:flex justify-between flex-wrap even:mt-32 overflow-x-hidden md:overflow-x-visible">
-        <div class="sm:w-5/12 flex flex-col justify-center items-center">
-        <h2 class="text-gold text-6xl">Classes</h2>
-        <p class="mt-8 text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, adipisci!</p>
-        </div>       
-        {{ promo('Wednesday','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','20','https://res.cloudinary.com/makingthings/image/upload/v1599551655/yoga/pose-1.svg','active') }}
-        {{ promo('Wednesday','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','20','https://res.cloudinary.com/makingthings/image/upload/v1599551655/yoga/pose-1.svg') }}
-        {{ promo('Office','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','10','https://res.cloudinary.com/makingthings/image/upload/v1599551418/yoga/pose-2.svg') }}          
-  </section>
+
+<section
+      class="container my-10 block sm:flex justify-between flex-wrap even:mt-32 overflow-x-hidden md:overflow-x-visible">
+      <div class="sm:w-5/12 flex flex-col justify-center sm:items-center">
+            <h2 class="text-gold text-6xl">Classes</h2>
+            <p class="mt-8 text-xl sm:text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt,
+                  adipisci!</p>
+      </div>
+      {{ promo('Wednesday','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','20','https://res.cloudinary.com/makingthings/image/upload/v1599551655/yoga/pose-1.svg','active') }}
+      {{ promo('Wednesday','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','20','https://res.cloudinary.com/makingthings/image/upload/v1599551655/yoga/pose-1.svg') }}
+      {{ promo('Office','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','10','https://res.cloudinary.com/makingthings/image/upload/v1599551418/yoga/pose-2.svg') }}
+</section>

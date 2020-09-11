@@ -1,27 +1,35 @@
+{% set listTitle = "font-meta block uppercase text-sm font-semibold mb-3 tracking-widest text-gold flex-auto"  %}
+{% set listItem = "mb-6 w-1/3 px-2 flex flex-col w-full"  %}
 {% from "./_includes/_macro-button.njk" import button %}
+{% from "./_includes/macros/_intro-listitem.njk" import introListitem %}
 {% extends "_includes/default.njk" %}
-
 {% block title %}It does work{% endblock %}
 {% block header %}{%include "_header.njk"%}{% endblock %}
 {% block content %}
-<div class="container flex h-auto flex-col items-start">
-  <div class="mx-auto sm:w-3/4 sm:mx-0 sm:ml-auto sm:mt-32 mt-16 sm:pr-8">
-    <img src="https://source.unsplash.com/200x200" class=" rounded-md max-w-full w-32 h-auto shadow sm:ml-auto" alt="">
-  </div>
-  <div class="w-full mx-auto sm:mx-0 mt-2 sm:mt-24">
-    {% include "_logo.njk" %}
-  </div>
-  <div class="text-center sm:text-left leading-11 sm:leading-16 w-full sm:w-3/4 mx-auto sm:mx-0 sm:ml-auto mt-6 text-2xl  sm:text-4xl sm:mt-20 text-gray-700 sm:pr-8">
-    <p>
-      Take some time to focus on your <em class="display">health</em>, <em class="display">wellbeing</em> and <em class="display">fitness</em>
-    </p>
-    
-  </div>
-  <div class="w-full sm:w-1/3 sm:ml-auto mt-12 lg:mt-32 sm:pr-8">
-  {{ button("get started") }}
-  </div>
-  
-</div>  
 {% include "_intro.njk" %}
-{% include "_promo.njk" %}  
+<div class="container flex flex-wrap">
+  <div class="sm:text-left sm:flex text-xl sm:py-24 lg:text-3xl ">
+    <figure
+      class="block sm:w-1/3 my-8 sm:my-auto relative sm:h-full sm:flex flex-col -mx-4 justify-between amy sm:border-b border-gray-800 sm:pb-6">
+      <div class="w-full self-start relative px-4 mb-8">
+        <img class="max-w-full w-24" src="https://res.cloudinary.com/makingthings/image/upload/v1595610096/yoga/amy.jpg"
+          alt="Hello Im Amy, your yoga instructor">
+        {% include "_amy.njk" %}
+      </div>
+
+      <figcaption class="text-sm px-4">
+        Amy id ut sit tristique. Sit quisque quam sit donec. Sed praesent quam nam pulvinar felis, lobortis non
+        penatibus porttitor. Lectus at id elit commodo consectetur blandit massa. Justo, fermentum, id cum id a
+        aenean
+      </figcaption>
+    </figure>
+    <ul
+      class="block sm:w-1/2 sm:-mt-2 ml-auto self-end sm:flex flex-col last:mb-0 border-t border-b border-gray-800 py-4 relative">
+      {{ introListitem("Center and Balance","Through guided breathing exercises")}}
+      {{ introListitem("Stretch and Strengthen","Through yoga poses taught in stages")}}
+      {{ introListitem("Relax and Restore","Through guided meditation")}}
+    </ul>
+  </div>
+</div>
+{% include "_promo.njk" %}
 {% endblock %}

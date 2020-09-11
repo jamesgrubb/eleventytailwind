@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger)
 const tl = gsap.timeline()
-
+const q = gsap.timeline({ defaults: { duration: 2 } })
 tl.from('header', {
     y: "-100%", scrollTrigger: {
         trigger: 'header',
@@ -12,6 +12,8 @@ tl.from('header', {
 }
 )
 
-const bend = gsap.timeline()
 
-bend.to('.bend', { attr: { d: 'M0 20 C20 15 80 15 100 20' }, duration: 2, yoyo: true, repeat: -1 })
+
+q.from('#question-mark', { opacity: 0, x: 80, ease: "back.out(1)" }, "+=1")
+    .from("#leaf", { transformOrigin: "center", scale: 0.5, ease: "back.out(1)" }, "")
+    .from('#pose', { transformOrigin: "center bottom", opacity: 0, rotate: 4, ease: "back.out(1)" }, "<=0.5")

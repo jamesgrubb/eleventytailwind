@@ -15,7 +15,10 @@ module.exports = {
         '-10%': '-10%',
         '100%': '100%',
         '90%': '90%',
+        '80%': '80%',
         '10%': '10%',
+        '50%': '50%',
+        '30%': '30%',
       },
       container: {
         center: true,
@@ -29,6 +32,10 @@ module.exports = {
         body: ['Poppins', 'sans-serif'],
         display: ['modish', 'sans'],
         meta: ['urw-din-semi-condensed', 'mono']
+      },
+      fontSize: {
+        '7xl': '5rem',
+        '8xl': '6rem',
       },
       backgroundSize: {
         'auto': 'auto',
@@ -57,7 +64,8 @@ module.exports = {
         '13': "3.25rem",
         '14': "3.5rem",
         '15': "3.75rem",
-        '16': "4rem"
+        '16': "4rem",
+        '17': "1",
       },
       maxHeight: {
         xs: "20rem",
@@ -82,6 +90,16 @@ module.exports = {
         "4xl": "56rem",
         "5xl": "64rem",
         "6xl": "72rem",
+      },
+      height: {
+        "20vmin": "20vmin",
+        "30vmin": "30vmin",
+        "40vmin": "40vmin",
+        "50vmin": "50vmin",
+        "20vmax": "20vmax",
+        "30vmax": "30vmax",
+        "40vmax": "40vmax",
+        "50vmax": "50vmax"
       }
     },
   },
@@ -90,6 +108,8 @@ module.exports = {
     borderWidth: ['responsive', 'first', 'even', 'hover', 'focus'],
     margin: ['responsive', 'first', 'last', 'hover', 'focus'],
     backgroundSize: ['responsive', 'hover', 'focus'],
+    height: ['responsive', 'hover', 'focus'],
+    backgroundColor: ['responsove', 'over', 'focus', 'active']
   },
   plugins: [
     plugin(function ({ addUtilities }) {
