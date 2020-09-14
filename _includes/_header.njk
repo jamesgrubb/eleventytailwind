@@ -1,4 +1,4 @@
-<header x-data="{ isOpen: true, scrollAtTop : true }" [cloak]
+<header x-data="{ isOpen: true, scrollAtTop : true }" [x-cloak]
     class="fixed z-20 sm:m-auto w-screen top-0 left-0 py-6 shadow-lg sm:py-8 flex justify-center bg-gray-100"
     @scroll.window="scrollAtTop = (window.pageYOffset > 50) ? false : true"
     :class="{'transform sm:-translate-y-full' : scrollAtTop}">
