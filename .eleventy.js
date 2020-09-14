@@ -12,12 +12,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
   });
-  eleventyConfig.addPassthroughCopy({
-    "./node_modules/gsap/dist/scrollTrigger.js": "./js/scrollTrigger.js",
-  });
-  eleventyConfig.addPassthroughCopy({
-    "./node_modules/gsap/dist/gsap.min.js": "./js/gsap.js",
-  });
+
 
   eleventyConfig.addShortcode("version", function () {
     return String(Date.now());
