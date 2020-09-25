@@ -1,37 +1,43 @@
+---
+title: "Yoga with Amy"
+description: "A place to learn Yoga"
+---
 {% set listTitle = "font-meta block uppercase text-sm font-semibold mb-3 tracking-widest text-gold flex-auto"  %}
 {% set listItem = "mb-6 w-1/3 px-2 flex flex-col w-full"  %}
-{% from "./_includes/_macro-button.njk" import button %}
+{% from "./_includes/macros/_button.njk" import button %}
 {% from "./_includes/macros/_intro-listitem.njk" import introListitem %}
 {% extends "_includes/default.njk" %}
-{% block title %}Yoga with Amy{% endblock %}
-{% block header %}{%include "_header.njk"%}{% endblock %}
+{% block title %}{{ title }}
+{% endblock %}
+{% block header %}{%include "_header.njk"%}
+{% endblock %}
 {% block content %}
-{% include "_intro.njk" %}
-<section class="container flex flex-wrap">
-  <div class="sm:text-left sm:flex text-xl sm:py-24 lg:text-3xl ">
-    <figure
+  {% include "_intro.njk" %}
+  <section class="container flex flex-wrap">
+    <div class="sm:text-left sm:flex text-xl sm:py-24 lg:text-3xl ">
+      <figure
       class="block sm:w-1/3 my-8 sm:my-auto relative sm:h-full sm:flex flex-col -mx-4  justify-between amy sm:border-b border-gray-800 sm:pb-6">
-      <div class="w-32 self-start relative px-4 mb-8">
-        <img class="max-w-full" src="https://res.cloudinary.com/makingthings/image/upload/v1595610096/yoga/amy.jpg"
+        <div class="w-32 self-start relative px-4 mb-8">
+          <img class="max-w-full" src="https://res.cloudinary.com/makingthings/image/upload/v1595610096/yoga/amy.jpg"
           alt="Hello Im Amy, your yoga instructor">
-        {% include "_amy.njk" %}
-      </div>
+          {% include "_amy.njk" %}
+        </div>
 
-      <figcaption class="text-sm px-4">
-        <spna class="font-semibold ">Amy</spna> id ut sit tristique. Sit quisque quam sit donec. Sed praesent quam nam
+        <figcaption class="text-sm px-4">
+          <span class="font-semibold ">Amy</span> id ut sit tristique. Sit quisque quam sit donec. Sed praesent quam nam
         pulvinar felis, lobortis non
         penatibus porttitor. Lectus at id elit commodo consectetur blandit massa. Justo, fermentum, id cum id a
         aenean
       </figcaption>
-    </figure>
-    <ul
+      </figure>
+      <ul
       class="list max-w-6xlblock sm:w-1/2 sm:-mt-2 ml-auto self-end sm:flex flex-col last:mb-0 border-t border-b border-gray-800 py-4 relative sm:h-full justify-between">
-      {{ introListitem("Center and Balance","Through guided breathing exercises")}}
-      {{ introListitem("Stretch and Strengthen","Through yoga poses taught in stages")}}
-      {{ introListitem("Relax and Restore","Through guided meditation")}}
-    </ul>
-  </div>
-</section>
-{% include "_promo.njk" %}
-{% include "_subscribe.njk" %}
+        {{ introListitem("Center and Balance","Through guided breathing exercises")}}
+        {{ introListitem("Stretch and Strengthen","Through yoga poses taught in stages")}}
+        {{ introListitem("Relax and Restore","Through guided meditation")}}
+      </ul>
+    </div>
+  </section>
+  {% include "_promo.njk" %}
+  {% include "_subscribe.njk" %}
 {% endblock %}

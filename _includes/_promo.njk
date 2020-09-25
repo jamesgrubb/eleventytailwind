@@ -4,16 +4,14 @@
 {% from "./macros/_section-title.njk" import title %}
 {% from "./macros/_section-paragraph.njk" import sectionParagraph %}
 
-
-
 <section
-      class="container my-10 block sm:flex justify-between flex-wrap even:mt-32 overflow-x-hidden md:overflow-x-visible">
+      class="container my-10  block sm:flex justify-between flex-wrap even:mt-32 overflow-x-hidden md:overflow-x-visible">
       <div class="sm:w-5/12 flex flex-col justify-center sm:items-center">
             {{ title("Classes")}}
             {{ sectionParagraph("Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt adipisci!") }}
 
       </div>
-      {{ promo('Thursday','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','20','https://res.cloudinary.com/makingthings/image/upload/v1599568624/yoga/pose-3.svg','active') }}
+      {{ promo('Thursday','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','20','https://res.cloudinary.com/makingthings/image/upload/v1599568624/yoga/pose-3.svg','active','/office') }}
       {{ promo('One-to-one','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','20','https://res.cloudinary.com/makingthings/image/upload/v1599551655/yoga/pose-1.svg') }}
       {{ promo('Party','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','10','https://res.cloudinary.com/makingthings/image/upload/v1599551418/yoga/pose-2.svg') }}
       {{ promo('Office','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ipsam.','10','https://res.cloudinary.com/makingthings/image/upload/v1599551418/yoga/pose-2.svg') }}

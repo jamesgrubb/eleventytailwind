@@ -1,9 +1,14 @@
-{% macro button(text='', url=false, disabled=false) %}
-{% set disabledCode = 'disabled=disabled aria-disabled=true' %}
-{% set buttonClass = 'w-full rounded-sm py-4 bg-teal-900 text-teal-300 uppercase tracking-widest font-semibold hover:bg-canary focus:outline-none focus:shadow-outline hover:text-teal-900 active:bg-teal-900 shadow-lg' %}
-{% if url %}
-<a class="{{ buttonClass }}" href="{{ url }}" role="button">{{ text }}</a>
-{% else %}
-<button class="{{ buttonClass }}" type="submit" {{ disabledCode if disabled }}>{{ text }}</button>
-{% endif %}
+{% macro button(text = '', url = false, disabled = false, secondary = false, primary = true) %}
+    {% set disabledCode = 'disabled=disabled aria-disabled=true' %}
+    {% set buttonClass = 'block text-center w-full rounded-sm py-4 bg-teal-900 text-teal-300 uppercase tracking-widest font-semibold hover:bg-canary focus:outline-none focus:shadow-outline hover:text-teal-900 active:bg-teal-900 shadow-lg' %}
+    {% set buttonClassSecondary = 'block text-center w-full rounded-sm py-4 bg-transparent border-teal-800 border-solid border-2 text-teal-800 uppercase tracking-widest font-semibold hover:border-teal-400 focus:outline-none focus:shadow-outline hover:text-teal-400 active:bg-teal-900' %}
+    {% if url and primary %}
+        <a class="{{ buttonClass }}" href="{{ url }}" role="button">{{ text }}</a>
+    {% elif url and primary == false %}
+        <a class="{{ buttonClassSecondary }}" href="{{ url }}" role="button">{{ text }}</a>
+    {% elif primary %}
+        <button class="{{ buttonClass }}" type="submit" {{ disabledCode if disabled }}>{{ text }}</button>
+    {% elif primary == false %}
+        <button class="{{ buttonClassSecondary }}" type="submit" {{ disabledCode if disabled }}>{{ text }}</button>
+    {% endif %}
 {% endmacro %}

@@ -1,0 +1,50 @@
+{
+    "tags": "classes",
+    "classes": [{
+            "title": "Thursdays",
+            "slug": "thursdays",
+            "description": "A description of the class. Wether in person or online enjoy an hour and a half of yoga and relaxation.Every thursday we use",
+            "image": "",
+            "modules": [{
+                    "title": "",
+                    "description": "",
+                    "price": {
+                        "online": 9,
+                        "face-to-face": 10
+                    }
+                },
+                {
+                    "title": "",
+                    "description": "",
+                    "price": {
+                        "face-to-face": 10
+                    }
+                }
+            ]
+
+        },
+        {
+            "title": "Office",
+            "slug": "office",
+            "description": "A description of the class. Wether in person or online enjoy an hour and a half of yoga and relaxation.Every thursday we use",
+            "image": "",
+            "modules": [{
+                    "title": "",
+                    "description": "",
+                    "price": {
+                        "online": 9,
+                        "face-to-face": 10
+                    }
+                },
+                {
+                    "title": "",
+                    "description": "",
+                    "price": {
+                        "face-to-face": 10
+                    }
+                }
+            ]
+
+        }
+    ]
+}

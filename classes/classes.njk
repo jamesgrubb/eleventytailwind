@@ -1,0 +1,19 @@
+---
+title: "Yoga with Amy"
+description: "Choose a class that suits your level"
+pagination:
+    data: classes
+    size: 1
+    alias: class
+permalink: "/{{ class.slug | slug }}/"
+---
+{# {% from "../_includes/macros/_class.njk" import class %} #}
+{% extends "../_includes/default.njk" %}
+{% block title %}{{ title }}
+{% endblock %}
+{% block header %}
+    {% include "_header.njk" %}
+{% endblock %}
+{% block content %}
+    {# class("{{ "title" }}") #}
+{% endblock %}

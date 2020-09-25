@@ -1,6 +1,9 @@
 const htmlmin = require("html-minifier");
-
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addWatchTarget("./_tmp/style.css");
